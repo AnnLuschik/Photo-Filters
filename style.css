@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 90vw;
+	height: 90vh;
+	margin: 0 auto;
+	border: 2px solid black;
+}
+
+figure {
+	width: 600px;
+	height: 400px;
+	margin-bottom: 25px;
+	border: 2px solid black;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.filterbar {
+	display: flex;
+	justify-content: space-between;
+	width: 600px;
+}
+
+button {
+	width: 90px;
+	height: 80px;
+}
