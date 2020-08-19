@@ -1,9 +1,9 @@
 let image = document.querySelector('img');
-let buttonList = document.querySelectorAll('button');
+let filterbar = document.querySelector('.filterbar');
 
-function addFilterToImage() {
-	currentFilter = this.dataset.value;
-	switch(currentFilter) {
+function addFilterToImage(button) {
+	currentFilter = button.dataset.value;
+	switch (currentFilter) {
 		case 'none':
 			image.style.filter = `${currentFilter}`;
 			break;
@@ -14,7 +14,7 @@ function addFilterToImage() {
 			image.style.filter = `${currentFilter}(200%)`;
 			break;
 		case 'invert':
-		case 'sepia': 
+		case 'sepia':
 			image.style.filter = `${currentFilter}(1)`;
 			break;
 		case 'blur':
@@ -23,6 +23,9 @@ function addFilterToImage() {
 	}
 }
 
-buttonList.forEach(button => {
-	button.addEventListener('click', addFilterToImage);
+filterbar.addEventListener('click', function (event) {
+	let target = event.target.tagName.toLowerCase();
+	if (target !== 'button') return;
+	let button = event.target;
+	addFilterToImage(button);
 });
