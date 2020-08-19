@@ -1,7 +1,7 @@
 let image = document.querySelector('img');
 let buttonList = document.querySelectorAll('button');
 
-function addFilter() {
+function addFilterToImage() {
 	currentFilter = this.dataset.value;
 	switch(currentFilter) {
 		case 'none':
@@ -24,5 +24,5 @@ function addFilter() {
 }
 
 buttonList.forEach(button => {
-	button.addEventListener('click', addFilter);
+	button.addEventListener('click', addFilterToImage);
 });
