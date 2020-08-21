@@ -25,7 +25,5 @@ function addFilterToImage(filter) {
 filterbar.addEventListener('click', function (event) {
 	let target = event.target.tagName.toLowerCase();
 	if (target !== 'button') return;
-	let button = event.target;
-	let filter = button.dataset.value;
-	addFilterToImage(filter);
+	addFilterToImage(event.target.dataset.value);
 });
